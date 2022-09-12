@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Studio Projects/BSEF19A019_Quran_Database_Assignment/app/src/main/res/layout/activity_surah.xml" value="0.27291666666666664" />
+        <entry key="..\:/Studio Projects/BSEF19A019_Quran_Database_Assignment/app/src/main/res/menu/main_menu.xml" value="0.27291666666666664" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/drawable/add_comment.xml" value="0.23" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/drawable/insert_comment.xml" value="0.1" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/drawable/laptop.xml" value="0.23" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/drawable/read_more.xml" value="0.1" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_ayat.xml" value="0.18958333333333333" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_book.xml" value="0.2328125" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_copy_db.xml" value="0.2328125" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_database_helper.xml" value="0.24739583333333334" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_englishintro.xml" value="0.27291666666666664" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_intro.xml" value="0.25" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_introduction_to_ayaat.xml" value="0.24114583333333334" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_introenglish.xml" value="0.27291666666666664" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_introenglishshow2.xml" value="0.22" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_my_dbhandler.xml" value="0.24114583333333334" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_surah.xml" value="0.25" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_translation.xml" value="0.2328125" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/activity_translation_names.xml" value="0.2328125" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/layout/header.xml" value="0.24114583333333334" />
+        <entry key="..\:/Test Run/NavigationDrawer-master/app/src/main/res/menu/main_menu.xml" value="0.24114583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
