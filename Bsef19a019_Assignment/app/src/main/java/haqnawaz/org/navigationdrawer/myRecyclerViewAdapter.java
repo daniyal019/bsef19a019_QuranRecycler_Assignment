@@ -1,6 +1,7 @@
 package haqnawaz.org.navigationdrawer;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,11 +26,18 @@ import java.util.List;
 
 public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAdapter.MyVH> {
     private Context context;
-    private Selected surat;
+    private final RecyclerViewInterface recyclerViewInterface;
     List<Friend> friendsList;
-    public myRecyclerViewAdapter(List<Friend> friendsList,Selected ayat) {
+    private final DialogInterface.OnClickListener mOnClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialogInterface, int i) {
+
+        }
+    };
+    public myRecyclerViewAdapter(Context context,List<Friend> friendsList,RecyclerViewInterface recyclerViewInterface) {
+        this.context=context;
         this.friendsList = friendsList;
-        this.surat=ayat;
+        this.recyclerViewInterface=recyclerViewInterface;
     }
 
     @NonNull
@@ -38,7 +46,7 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.single_item, parent, false);
-        return new MyVH(itemView);
+        return new MyVH(itemView,recyclerViewInterface);
     }
 
     @Override
@@ -55,27 +63,35 @@ public class myRecyclerViewAdapter extends RecyclerView.Adapter<myRecyclerViewAd
         return friendsList.size();
     }
 
-    public interface Selected
-    {
-        void selected(Friend friend);
-    }
+
     public class MyVH extends RecyclerView.ViewHolder {
         ImageView imageViewFriend;
         TextView textViewFriendName;
-        TextView textViewdateFriend;
-        TextView textViewCity;
         Friend data;
-        public MyVH(@NonNull View itemView) {
+
+        public MyVH(@NonNull View itemView,RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             imageViewFriend = itemView.findViewById(R.id.imageViewFriendPicture);
             textViewFriendName = itemView.findViewById(R.id.textViewFriendName);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    surat.selected(friendsList.get(getAdapterPosition()));
+                    if(recyclerViewInterface!=null)
+                    {
+                        int position = getAdapterPosition();
+                        if(position!=RecyclerView.NO_POSITION)
+                        {
+                            recyclerViewInterface.onItemClick(position) ;
+                        }
+                    }
+
+
                 }
             });
+
         }
     }
+
+
 }
 

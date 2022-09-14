@@ -30,10 +30,11 @@ import java.util.List;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements myRecyclerViewAdapter.Selected  {
+public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
     List<Friend> friendsList = new ArrayList<>();
     RecyclerView recyclerView;
-
+    Button b1;
+Friend data;
     Button button;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
@@ -44,10 +45,14 @@ public class MainActivity extends AppCompatActivity implements myRecyclerViewAda
 
         Friend f0 = new Friend(1,"سُورتیں", R.drawable.d);
 
-        Friend f1 = new Friend(1,"سُورتیں", R.drawable.d);
+        Friend f1 = new Friend(2,"Introduction", R.drawable.d);
+        Friend f2 = new Friend(3,"Urdu Introduction", R.drawable.d);
+
         friendsList.addAll(Arrays.asList(new Friend[]{f0}));
 
         friendsList.addAll(Arrays.asList(new Friend[]{f1}));
+        friendsList.addAll(Arrays.asList(new Friend[]{f2}));
+
 
         recyclerView = findViewById(R.id.recylerViewStudent);
 
@@ -62,19 +67,26 @@ public class MainActivity extends AppCompatActivity implements myRecyclerViewAda
                 true);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new myRecyclerViewAdapter(friendsList,this) ;
+        adapter = new myRecyclerViewAdapter(this,friendsList,this) ;
         recyclerView.setAdapter(adapter);
         //adapter.notifyDataSetChanged();
-
 
     }
 
     @Override
-    public void selected(Friend friend) {
+    public void onItemClick(int position) {
+        if(position==0) {
+            startActivity(new Intent(MainActivity.this, surah.class));
+        }
+        else if(position==1) {
+            startActivity(new Intent(MainActivity.this, introenglish.class));
+        }
+        else if(position==2)
+        {
+            startActivity(new Intent(MainActivity.this,introductionToAyaat.class));
+        }
+    }}
 
-        startActivity(new Intent(MainActivity.this,surah.class));
-    }
-}
 
 
 
